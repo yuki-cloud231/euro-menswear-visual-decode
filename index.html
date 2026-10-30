@@ -545,6 +545,29 @@ details.col.fold>summary:hover h4{color:var(--ink)}
 /* H. 已读进度小徽章 */
 .rdmini{margin-left:auto;font-size:10.5px;font-weight:500;color:var(--ink3);letter-spacing:.02em;white-space:nowrap}
 .rdmini b{color:var(--teal);font-weight:800}
+
+/* Responsive image grids: override per-module inline column counts. */
+@media screen and (max-width:820px){
+  .mstrip{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px 10px}
+  .gallery,.dgal{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .mstrip figcaption,.dgal .gfig figcaption{font-size:12px;line-height:1.5;height:auto;overflow:visible;overflow-wrap:anywhere}
+}
+@media screen and (max-width:620px){
+  .wrap{padding-left:14px;padding-right:14px}
+  .mcard{padding:14px 12px}
+  .mstrip,.gallery,.dgal{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px 10px}
+  .mstrip .no{font-size:10px;padding:2px 5px}
+  .brand{flex-wrap:wrap;gap:5px}
+  .brand b{font-size:19px}
+  .readbar .rb-hint,.readbar .rb-gov{white-space:normal;overflow-wrap:anywhere}
+  .ov-grid{grid-template-columns:minmax(0,1fr)}
+  .flow{grid-template-columns:minmax(0,1fr)!important}
+  details.col.fold{min-width:0}
+  .tb-group{min-width:0;flex-basis:100%}
+  .acc .body{padding-left:12px;padding-right:12px}
+  .lgt{padding:12px}
+  .lgt-body{padding:16px}
+}
 </style>
 </head><body>
 <div class="top"><div class="wrap"><div class="topbar"><div class="brand"><b>欧洲男装 高点击视觉拆解 · 全品类合集</b><span>11 个品类 · 站内 263 款高点击样本 × 站外 33 个视觉方向 · 11 维解码口径</span></div><div class="legend"><i></i>黄色底 = 可直接复述的关键数字　·　顶部切换品类，页内切换三页</div></div><div class="chips"><button class="chip govchip on" data-c="gov">总览<span class="n">11 品类</span></button><button class="chip" data-c="0">外套夹克<span class="n">22 款</span></button><button class="chip" data-c="1">风衣/大衣<span class="n">18 款</span></button><button class="chip" data-c="2">棉服/羽绒服<span class="n">31 款</span></button><button class="chip" data-c="3">正装<span class="n">33 款</span></button><button class="chip" data-c="4">套装<span class="n">28 款</span></button><button class="chip" data-c="5">卫衣/连帽衫<span class="n">20 款</span></button><button class="chip" data-c="6">毛衣/开衫/针织<span class="n">25 款</span></button><button class="chip" data-c="7">衬衫/马甲<span class="n">20 款</span></button><button class="chip" data-c="8">T恤/POLO<span class="n">19 款</span></button><button class="chip" data-c="9">牛仔裤<span class="n">25 款</span></button><button class="chip" data-c="10">长裤<span class="n">22 款</span></button></div><div class="readbar" id="readbar"><span class="rb-dot"></span><b class="rb-t">已读 <em id="rb-n">0</em>/<span id="rb-d">11</span></b><span class="rb-hint">11 个品类各自独立成章，全部内容都在这一页</span><div class="rb-bar"><i id="rb-fill" style="width:0%"></i></div><div class="rb-gov">每个品类含「高点击要点 / 逐款拆解 / 视觉延展」三页</div></div><div class="tabs" style="display:none"><button class="tab on" data-t="0">高点击要点<span class="en">POINTS</span></button><button class="tab" data-t="1">逐款拆解<span class="en">PER ITEM</span></button><button class="tab" data-t="2">视觉延展<span class="en">EXTENSION</span></button></div></div></div>
